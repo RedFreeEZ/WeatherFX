@@ -23,4 +23,4 @@ public class Main extends Application {
         weather.getWeatherFor8Days();
         launch();
     }
-}
+}//
