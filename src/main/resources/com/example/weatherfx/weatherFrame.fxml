@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1920.0" stylesheets="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherfx.Main">
+<AnchorPane maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1920.0" style="-fx-background-color: #2A9D8F;" stylesheets="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherfx.Main">
    <children>
-      <VBox layoutX="110.0" layoutY="31.0" prefHeight="122.0" prefWidth="386.0" spacing="30.0">
+      <VBox layoutX="110.0" layoutY="31.0" prefHeight="158.0" prefWidth="386.0" spacing="30.0">
          <children>
-            <ComboBox prefHeight="45.0" prefWidth="442.0" promptText="Область" />
-            <ComboBox prefHeight="45.0" prefWidth="442.0" promptText="Город" />
+            <TextField prefHeight="50.0" prefWidth="386.0" promptText="Введите № региона" style="-fx-background-radius: 15; -fx-border-radius: 10; -fx-background-color: #264653; -fx-border-color: #F4A261;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <ComboBox prefHeight="74.0" prefWidth="386.0" promptText="City" style="-fx-background-radius: 15; -fx-background-color: #e76f51; -fx-border-color: #264653; -fx-border-radius: 10;" />
          </children>
       </VBox>
-      <Pane layoutX="535.0" layoutY="31.0" prefHeight="383.0" prefWidth="640.0">
+      <Pane layoutX="549.0" layoutY="31.0" prefHeight="383.0" prefWidth="640.0" style="-fx-border-color: #F4A261; -fx-background-color: #264653; -fx-border-radius: 10; -fx-background-radius: 15;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aacebde" height="383.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
             <ImageView fitHeight="178.0" fitWidth="237.0" layoutX="372.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-            <Line endX="640.0" layoutY="200.0" strokeWidth="2.0" />
-            <Line endX="400.0" layoutY="290.0" rotate="90.0" startX="220.0" strokeWidth="2.0" />
-            <Label alignment="CENTER" layoutX="355.0" layoutY="212.0" prefHeight="56.0" prefWidth="113.0" text="wind speed">
+            <Line endX="635.0" layoutX="2.0" layoutY="200.0" stroke="#f4a261" strokeWidth="2.0" />
+            <Line endX="400.0" layoutY="290.0" rotate="90.0" startX="220.0" stroke="#f4a261" strokeWidth="2.0" />
+            <Label alignment="CENTER" layoutX="355.0" layoutY="212.0" prefHeight="56.0" prefWidth="113.0" text="wind speed" textFill="#e76f51">
                <font>
                   <Font size="45.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="355.0" layoutY="287.0" prefHeight="56.0" prefWidth="113.0" text="humidity">
+            <Label alignment="CENTER" layoutX="355.0" layoutY="287.0" prefHeight="56.0" prefWidth="113.0" text="humidity" textFill="#e76f51">
                <font>
                   <Font size="45.0" />
                </font>
             </Label>
-            <Text layoutX="467.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" wrappingWidth="47.6708984375">
+            <Text fill="#f4a261" layoutX="467.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" wrappingWidth="47.6708984375">
                <font>
                   <Font name="Poor Richard" size="40.0" />
                </font>
             </Text>
-            <Text layoutX="466.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="м/с" wrappingWidth="82.6708984375">
+            <Text fill="#f4a261" layoutX="466.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="м/с" wrappingWidth="82.6708984375">
                <font>
                   <Font name="Poor Richard" size="40.0" />
                </font>
             </Text>
-            <Label alignment="CENTER" layoutX="91.0" layoutY="212.0" prefHeight="66.0" prefWidth="132.0" text="pressure">
+            <Label alignment="CENTER" layoutX="91.0" layoutY="212.0" prefHeight="66.0" prefWidth="132.0" text="pressure" textFill="#e76f51">
                <font>
                   <Font size="60.0" />
                </font>
             </Label>
-            <Text layoutX="83.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="мм рт. ст" wrappingWidth="147.6708984375">
+            <Text fill="#f4a261" layoutX="83.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="мм рт. ст" wrappingWidth="147.6708984375">
                <font>
                   <Font name="Poor Richard" size="40.0" />
                </font>
             </Text>
-            <Label alignment="CENTER" layoutX="26.0" layoutY="44.0" prefHeight="146.0" prefWidth="209.0" text="temp">
+            <Label alignment="CENTER" layoutX="26.0" layoutY="44.0" prefHeight="146.0" prefWidth="209.0" text="temp" textFill="#e76f51">
                <font>
                   <Font size="100.0" />
                </font>
             </Label>
-            <Text layoutX="223.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="С°" wrappingWidth="64.6708984375">
+            <Text fill="#f4a261" layoutX="223.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="С°" wrappingWidth="64.6708984375">
                <font>
                   <Font name="Poor Richard" size="72.0" />
                </font>
             </Text>
          </children>
       </Pane>
-      <Pane layoutX="970.0" layoutY="425.0" prefHeight="275.0" prefWidth="200.0">
+      <ImageView fitHeight="227.0" fitWidth="386.0" layoutX="110.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/pushin.png" />
+         </image></ImageView>
+      <Pane layoutX="998.0" layoutY="424.0" prefHeight="275.0" prefWidth="200.0" style="-fx-background-color: #264653; -fx-background-radius: 15; -fx-border-color: #F4A261; -fx-border-radius: 10;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aacebde" height="275.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
-            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day">
+            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day" textFill="#f4a261">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp" textFill="#e76f51">
                <font>
                   <Font size="40.0" />
                </font>
@@ -78,15 +86,14 @@
             <ImageView fitHeight="146.0" fitWidth="200.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="755.0" layoutY="425.0" prefHeight="275.0" prefWidth="200.0">
+      <Pane layoutX="769.0" layoutY="424.0" prefHeight="275.0" prefWidth="200.0" style="-fx-background-color: #264653; -fx-background-radius: 15; -fx-border-color: #F4A261; -fx-border-radius: 10;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aacebde" height="275.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
-            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day">
+            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day" textFill="#f4a261">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp" textFill="#e76f51">
                <font>
                   <Font size="40.0" />
                </font>
@@ -94,15 +101,14 @@
             <ImageView fitHeight="146.0" fitWidth="200.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="540.0" layoutY="425.0" prefHeight="275.0" prefWidth="200.0">
+      <Pane layoutX="540.0" layoutY="424.0" prefHeight="275.0" prefWidth="200.0" style="-fx-background-color: #264653; -fx-background-radius: 15; -fx-border-color: #F4A261; -fx-border-radius: 10;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aacebde" height="275.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
-            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day">
+            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day" textFill="#f4a261">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp" textFill="#e76f51">
                <font>
                   <Font size="40.0" />
                </font>
@@ -110,15 +116,14 @@
             <ImageView fitHeight="146.0" fitWidth="200.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="110.0" layoutY="425.0" prefHeight="275.0" prefWidth="200.0">
+      <Pane layoutX="82.0" layoutY="424.0" prefHeight="275.0" prefWidth="200.0" style="-fx-background-color: #264653; -fx-background-radius: 15; -fx-border-color: #F4A261; -fx-border-radius: 10;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aacebde" height="275.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
-            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day">
+            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day" textFill="#f4a261">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp" textFill="#e76f51">
                <font>
                   <Font size="40.0" />
                </font>
@@ -126,15 +131,14 @@
             <ImageView fitHeight="146.0" fitWidth="200.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <Pane layoutX="325.0" layoutY="425.0" prefHeight="275.0" prefWidth="200.0">
+      <Pane layoutX="311.0" layoutY="424.0" prefHeight="275.0" prefWidth="200.0" style="-fx-background-color: #264653; -fx-background-radius: 15; -fx-border-color: #F4A261; -fx-border-radius: 10;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6aacebde" height="275.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
-            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day">
+            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="200.0" text="day" textFill="#f4a261">
                <font>
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="203.0" prefHeight="66.0" prefWidth="200.0" text="temp" textFill="#e76f51">
                <font>
                   <Font size="40.0" />
                </font>
@@ -142,6 +146,5 @@
             <ImageView fitHeight="146.0" fitWidth="200.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
-      <ImageView fitHeight="245.0" fitWidth="386.0" layoutX="110.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

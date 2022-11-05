@@ -14,12 +14,13 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setScene(scene);
         stage.show();
+        stage.setTitle("Погода");
     }
 
     public static void main(String[] args) {
-        Weather weather = new Weather("33");
+        Weather weather = new Weather("77");
         weather.MapCityAndTemp();
-        weather.FindCity("Владимир");
+        weather.FindCity("Москва");
         weather.getWeatherFor8Days();
         launch();
     }
