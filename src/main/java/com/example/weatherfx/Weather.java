@@ -80,9 +80,14 @@ public class Weather {
 
             Elements InfoFor3days = document.select(" div.dayline");//div.city// div.listing > ul > li > a
             for (Element element : InfoFor3days) {
+                String[] IArr = new String[5];
 
-                String[] IArr = element.text().split("% ");
-                Day TOD = new Day(Parser.ParserChar1(IArr[0]), IArr[1], IArr[2], IArr[3]);
+                IArr = element.text().split("% ");
+
+                if(IArr.length == 2 || IArr.length == 3 )
+                {IArr = new String[]{IArr[0], IArr[1], "", "", ""};}
+
+                Day TOD = new Day(Parser.ParserChar1(IArr[0]), IArr[1],IArr[2],IArr[3]);
                 System.out.println("" + TOD.getDate());
                 System.out.println(" " + TOD.getMorning());
                 System.out.println(" " + TOD.getDay());

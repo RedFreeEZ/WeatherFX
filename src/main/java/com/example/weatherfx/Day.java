@@ -8,10 +8,10 @@ public class Day {
 
 
 
-    public Day(String Date, String Morning, String Day, String Evening) {
+    public Day(String Date, String Morning, String Day, String Evening) {//
         this.date = Date;
         this.morning = Morning;
-        this.day  = Day ;
+         this.day  = Day ;
         this.evening = Evening;
 
 
@@ -29,7 +29,7 @@ public class Day {
         return day;
     }
 
-    public String getEvening() {
+   public String getEvening() {
         return evening;
-    }
+   }
 }
