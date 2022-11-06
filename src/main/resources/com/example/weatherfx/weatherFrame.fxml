@@ -10,16 +10,12 @@
 
 <AnchorPane maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1920.0" style="-fx-background-color: #2A9D8F;" stylesheets="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherfx.Main">
    <children>
-      <VBox layoutX="110.0" layoutY="31.0" prefHeight="158.0" prefWidth="386.0" spacing="30.0">
-         <children>
-            <TextField prefHeight="50.0" prefWidth="386.0" promptText="Введите № региона" style="-fx-background-radius: 15; -fx-border-radius: 10; -fx-background-color: #264653; -fx-border-color: #F4A261;">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </TextField>
-            <ComboBox prefHeight="74.0" prefWidth="386.0" promptText="City" style="-fx-background-radius: 15; -fx-background-color: #e76f51; -fx-border-color: #264653; -fx-border-radius: 10;" />
-         </children>
-      </VBox>
+      <TextField layoutX="110.0" layoutY="38.0" prefHeight="50.0" prefWidth="209.0" promptText="Введите № региона" style="-fx-background-radius: 15; -fx-border-radius: 10; -fx-background-color: e76f51; -fx-border-color: #264653;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <ComboBox layoutX="110.0" layoutY="100.0" prefHeight="74.0" prefWidth="386.0" promptText="City" style="-fx-background-radius: 15; -fx-background-color: #e76f51; -fx-border-color: #264653; -fx-border-radius: 10;" />
       <Pane layoutX="549.0" layoutY="31.0" prefHeight="383.0" prefWidth="640.0" style="-fx-border-color: #F4A261; -fx-background-color: #264653; -fx-border-radius: 10; -fx-background-radius: 15;">
          <children>
             <ImageView fitHeight="178.0" fitWidth="237.0" layoutX="372.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
@@ -146,5 +142,6 @@
             <ImageView fitHeight="146.0" fitWidth="200.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
+      <Button layoutX="328.0" layoutY="38.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #f4a261; -fx-border-color: #264653; -fx-background-radius: 15; -fx-border-radius: 10;" text="Ввод" textFill="#264653" />
    </children>
 </AnchorPane>

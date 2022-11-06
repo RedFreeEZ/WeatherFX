@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class Main extends Application {
@@ -21,11 +20,8 @@ public class Main extends Application {
 
     }
 
+
     public static void main(String[] args) {
-        Weather weather = new Weather("77");
-        weather.MapCityAndTemp();
-        weather.FindCity("Москва");
-        weather.getWeatherFor8Days();
         launch();
     }
 }//
