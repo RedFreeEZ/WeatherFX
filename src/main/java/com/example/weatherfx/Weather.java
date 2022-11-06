@@ -23,7 +23,6 @@ public class Weather {
     private String ALLCitys;
     private List<Day> TimeOfDay = new ArrayList<>();
     HashMap<String, String> CAT = new HashMap<>();
-    private static HashMap<String, String> cities = new HashMap<>();
     HashMap<String, String> CAH = new HashMap<>();
 
     public void GetRegion(String Region) {
@@ -54,33 +53,6 @@ public class Weather {
         }
     }
 
-
-  /*  public String MapCityAndTemp() {
-        try {
-            Document document = Jsoup.connect(URL).get();
-            document.outputSettings().charset(charset);
-
-            Elements city = document.select("div.listing > ul > li.gorod ");//div.city// div.listing > ul > li > a
-            Elements temperature = document.select("div.listing > ul > li > span.weather_temp_image > span.weather_temp");// weather-value div.temperature
-            Elements cityHref = document.select("div.listing > ul > li.gorod >a");
-
-            String[] cArr = city.text().split("°");// ????? ??????? ???????? ??????
-            String[] tArr = temperature.text().split(" ");// ????? ??????? ???????? ???????????
-
-            cityList = new ArrayList<>(Arrays.asList(cArr));//
-            tempList = new ArrayList<>(Arrays.asList(tArr));//
-            HrefValue = cityHref.eachAttr("href");//
-
-            for (int i = 0; i < tempList.size(); i++) {
-                CAT.put(Parser.ParserChar(cityList.get(i)), tempList.get(i));// ? ????? ?????????? ?? ??????? ? ???????????, ??????? ???? ???????? ?? ????????: ????-????????;
-                CAH.put(Parser.ParserChar(cityList.get(i)), HrefValue.get(i));// ? ????? ?????????? ?? ??????? ? ???????, ??????? ???? ???????? ?? ????????: ????-????????;
-                System.out.println(Parser.ParserChar(cityList.get(i)));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
 
     public String FindCity(String CityFind) {
         for (int i = 0; i < cityList.size(); i++) {
@@ -127,10 +99,4 @@ public class Weather {
         return null;
     }
 
-    public String getCityUrlByName(String cityName) {
-        System.out.println(CAH.get(cityName));
-
-        return CAH.get(cityName);
-
-    }
 }
